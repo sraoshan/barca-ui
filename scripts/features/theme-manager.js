@@ -526,7 +526,7 @@ if (portraitRight) {
 
     windowEl.style.setProperty(
     "--barca-portrait-right",
-    `url("${portraiRight}")`
+    `url("${portraitRight}")`
 );
 }
 
