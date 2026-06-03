@@ -370,7 +370,7 @@ const createPortrait = (
     );
 
     portrait.style.backgroundImage =
-        `url("/${src}")`;
+    `url("${src}")`;
 
         const fxMap = {
 
@@ -509,25 +509,25 @@ console.log(
 if (portraitCenter) {
 
     windowEl.style.setProperty(
-        "--barca-portrait-center",
-        `url("/${portraitCenter}")`
-    );
+    "--barca-portrait-center",
+    `url("${portraitCenter}")`
+);
 }
 
 if (portraitLeft) {
 
     windowEl.style.setProperty(
-        "--barca-portrait-left",
-        `url("/${portraitLeft}")`
-    );
+    "--barca-portrait-left",
+    `url("${portraitLeft}")`
+);
 }
 
 if (portraitRight) {
 
     windowEl.style.setProperty(
-        "--barca-portrait-right",
-        `url("/${portraitRight}")`
-    );
+    "--barca-portrait-right",
+    `url("${portraiRight}")`
+);
 }
 
 const applyPortraitFX = (
