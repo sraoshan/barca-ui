@@ -1,0 +1,96 @@
+/*
+ * Water theme.
+ * First migrated theme layer for the current soft magical girl look.
+ * This file intentionally keeps layout, grids, stat positioning, and wrappers out.
+ */
+
+.theme-desire {
+
+    --barca-accent: #c86b98;
+
+    --barca-accent-soft: #fff3f8;
+
+    --barca-accent-strong: #7c78d8;
+
+    --barca-surface: #fffdfd;
+
+    --barca-surface-alt:
+        rgba(255, 245, 250, 0.82);
+
+    --barca-surface-soft:
+        rgba(255, 255, 255, 0.76);
+
+    --barca-surface-top: rgba(238, 214, 245, 0.30);
+
+    --barca-text: #735f6c;
+
+    --barca-select-text: #b05d88;
+
+    --barca-title: #9d8ae8;
+
+    --barca-outline:
+        rgba(210, 180, 235, 0.42);
+
+    --barca-radius:
+        var(--barca-radius-md);
+
+    --barca-theme-background:
+        url("");
+
+    --barca-theme-icon: "\2665";
+
+    --barca-theme-panel-gradient:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fff3f8 55%,
+            #f1efff 100%
+        );
+}
+
+
+
+.theme-desire .barca-tab:hover {
+    background:
+        rgba(220, 190, 255, 0.82)
+        !important;
+}
+
+.theme-leaf.window-app.sheet.actor input[name="name"],
+.theme-leaf.window-app.sheet.actor .charname input,
+.theme-leaf.window-app.sheet.actor header input {
+    font-family: var(--barca-font-title) !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    text-align: center !important;
+    color: var(--barca-accent) !important;
+    background: rgba(255, 255, 255, 0.55) !important;
+    border: 2px solid rgba(255, 255, 255, 0.75) !important;
+    border-radius: var(--barca-radius-pill) !important;
+    padding: 4px 12px !important;
+}
+
+
+
+.theme-desire .stats-list .stat label {
+    color: #7d74d8;
+}
+
+.theme-desire .stat-value {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fff1f7 60%,
+            #f1efff 100%
+        ) !important;
+}
+
+
+
+
+/* flexrow attr colors */ 
+
+
+

@@ -1,0 +1,75 @@
+/*
+ * Barca UI visual vocabulary.
+ *
+ * This file defines reusable visual component classes only. These classes are
+ * not a framework, do not imply a custom DOM structure, and should not own
+ * PbtA layout decisions such as grids, stat positions, wrappers, or sheet flow.
+ *
+ * Component classes:
+ * .barca-panel: framed visual surface for a meaningful UI block.
+ * .barca-section: lighter grouping surface inside a sheet or panel.
+ * .barca-tab: navigational tab or tab-like action.
+ * .barca-pill: rounded capsule shape shared by tabs, badges, and compact chips.
+ * .barca-input: single-line text or numeric input.
+ * .barca-textarea: multiline text field.
+ * .barca-select: select/dropdown field.
+ * .barca-title: decorative heading/title text.
+ * .barca-label: small field/control label.
+ * .barca-stress-track: existing stress tracker container.
+ * .barca-stress-box: existing stress checkbox, styled as a Barca stress unit.
+ *
+ * State classes:
+ * .active, .is-filled, .is-sealed, .is-disabled, :hover, and :focus are state
+ * hooks owned by the rendered element. Prefer those native/simple states before
+ * adding Barca-specific state classes.
+ *
+ * Layout classes:
+ * Structural layout remains in system/component layout files. Do not use these
+ * visual classes to position stats, define grids, or reorganize actor sheets.
+ *
+ * Theme classes:
+ * .theme-{id}, such as .theme-water, provide visual identity through CSS
+ * variables. Themes should style these components rather than targeting the
+ * PbtA DOM directly when a Barca component class is available.
+ */
+
+.barca-panel,
+.barca-section {
+    border-radius: var(--barca-radius);
+}
+
+.barca-title {
+    font-family: var(--barca-font-title) !important;
+}
+
+.barca-label {
+    font-family: var(--barca-font-body) !important;
+}
+
+.barca-input,
+.barca-textarea,
+.barca-select {
+    border-radius: var(--barca-radius) !important;
+    font-family: var(--barca-font-body) !important;
+}
+
+.barca-tab,
+.barca-pill {
+    border-radius: var(--barca-radius-pill) !important;
+}
+
+.barca-tab {
+    transition:
+        background-color var(--barca-transition-fast),
+        border-color var(--barca-transition-fast),
+        color var(--barca-transition-fast);
+}
+
+.barca-theme-selector {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 6px 12px;
+}

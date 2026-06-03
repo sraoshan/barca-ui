@@ -1,0 +1,13 @@
+.stress-sealed {
+    opacity: 0.25 !important;
+    cursor: not-allowed !important;
+    pointer-events: none;
+}
+
+.cell__clock {
+    display: grid !important;
+    grid-template-columns: repeat(7, max-content);
+    gap: 4px;
+    justify-items: center;
+    align-items: center;
+}

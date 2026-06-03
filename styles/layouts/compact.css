@@ -1,0 +1,82 @@
+.layout-compact .sheet-attributes {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.layout-compact .cell--image {
+    display: none;
+}
+
+
+
+.layout-compact .stats-list {
+
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(2, 160px);
+
+    justify-content: center;
+
+    gap:
+        18px 28px;
+
+    max-width: 360px;
+
+    margin:
+        32px auto 0;
+}
+
+.layout-compact .stats-list .stat {
+
+    position: relative !important;
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+.layout-compact .stat:nth-child(1) {
+
+    grid-column: 1 / -1;
+
+    width: 160px;
+
+    margin: 0 auto;
+}
+
+
+
+/* backup sheet top
+
+.layout-compact.portrait-dual .sheet-top {
+
+    background:
+        none;
+
+    background-image:
+        var(--barca-portrait-left),
+        var(--barca-portrait-right);
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
+
+    background-position:
+
+calc(0% + var(--portrait-left-x, 0px))
+calc(50% + var(--portrait-left-y, 0px)),
+
+calc(100% + var(--portrait-right-x, 0px))
+calc(50% + var(--portrait-right-y, 0px));
+
+background-size:
+
+var(--portrait-left-size, 260px),
+var(--portrait-right-size, 260px);
+
+}
+
+*/ 
+
+

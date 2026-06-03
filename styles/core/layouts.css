@@ -1,0 +1,195 @@
+@import url("../layouts/default.css");
+@import url("../layouts/compact.css");
+@import url("../layouts/top-row.css");
+@import url("../layouts/bottom-row.css");
+@import url("../layouts/middle-column.css");
+@import url("../layouts/pyramid.css");
+@import url("../layouts/bracket.css");
+
+.sheet-attributes {
+
+    position: relative;
+    min-height: 420px;
+
+    background-repeat: no-repeat;
+    
+}
+
+.sheet-top {
+
+    position: relative;
+    overflow: hidden;
+}
+
+.cell--stats,
+.sheet-attributes-top {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.barca-portrait {
+    
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    background-repeat:
+        no-repeat;
+
+    transform:
+
+    rotate(
+        var(--portrait-rotate, 0deg)
+    )
+
+    scaleX(
+        var(--portrait-scale-x, 1)
+    )
+
+    scaleY(
+        var(--portrait-scale-y, 1)
+    );
+
+    opacity:
+        var(--portrait-opacity, 1);
+
+    mix-blend-mode:
+        var(--portrait-blend, normal);
+
+    filter:
+
+    grayscale(
+        var(--portrait-grayscale, 0)
+    )
+
+    brightness(
+        var(--portrait-brightness, 1)
+    )
+
+    contrast(
+        var(--portrait-contrast, 1)
+    )
+
+    blur(
+        var(--portrait-blur, 0px)
+    )
+
+    saturate(
+        var(--portrait-saturate, 1)
+    )
+
+    hue-rotate(
+        var(--portrait-hue, 0deg)
+    )
+
+    sepia(
+        var(--portrait-sepia, 0)
+    )
+
+    drop-shadow(
+        0 0
+        calc(
+            var(--portrait-glow, 0)
+            * 40px
+        )
+        rgba(255,255,255,0.9)
+    )
+
+    drop-shadow(
+        0 0
+        calc(
+            var(--portrait-shadow, 0)
+            * 30px
+        )
+        rgba(0,0,0,0.8)
+    );
+
+        
+}
+
+.barca-portrait-center {
+
+    height: 420px;
+
+    background-position:
+        calc(50% + var(--portrait-center-x, 0px))
+        calc(50% + var(--portrait-center-y, 0px));
+
+    background-size:
+        var(--portrait-center-size, 420px);
+}
+
+.barca-portrait-left,
+.barca-portrait-right {
+
+    height: 420px;
+}
+
+.barca-portrait-left {
+
+    background-position:
+        calc(0% + var(--portrait-left-x, 0px))
+        calc(50% + var(--portrait-left-y, 0px));
+
+    background-size:
+        var(--portrait-left-size, 260px);
+}
+
+.barca-portrait-right {
+
+    background-position:
+        calc(100% + var(--portrait-right-x, 0px))
+        calc(50% + var(--portrait-right-y, 0px));
+
+    background-size:
+        var(--portrait-right-size, 260px);
+}
+
+.barca-portrait-left,
+.barca-portrait-center,
+.barca-portrait-right {
+
+    display: none;
+}
+
+.portrait-single .barca-portrait-center {
+
+    display: block;
+}
+
+.portrait-dual .barca-portrait-left,
+.portrait-dual .barca-portrait-right {
+
+    display: block;
+}
+
+.portrait-triple .barca-portrait-left,
+.portrait-triple .barca-portrait-center,
+.portrait-triple .barca-portrait-right {
+
+    display: block;
+}
+
+.window-app.sheet.actor .sheet-attributes-top {
+
+    position: relative;
+
+    margin-top: 1px;
+
+    z-index: 2;
+}
+
+
+
+
+
+
+

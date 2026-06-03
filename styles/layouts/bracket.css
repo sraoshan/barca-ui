@@ -1,0 +1,112 @@
+.layout-bracket .sheet-attributes {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.layout-bracket .cell--image {
+    display: none;
+}
+
+
+.layout-bracket .cell--stats {
+
+    align-self: flex-end;
+}
+
+
+.layout-bracket .stats-list {
+
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(3, 200px);
+
+    justify-content: center;
+
+    gap:
+        12px 48px;
+
+    width: 90%;
+
+    max-width: 760px;
+
+    margin:
+        auto auto 24px;
+}
+
+.layout-bracket .stat:nth-child(1) {
+
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.layout-bracket .stat:nth-child(2) {
+
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.layout-bracket .stat:nth-child(3) {
+
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.layout-bracket .stat:nth-child(4) {
+
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.layout-bracket .stat:nth-child(5) {
+
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.layout-bracket .stats-list .stat {
+
+    position: relative !important;
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+
+
+
+
+/* backup sheet top
+
+.layout-bracket.portrait-dual .sheet-top {
+
+    background:
+        none;
+
+    background-image:
+        var(--barca-portrait-left),
+        var(--barca-portrait-right);
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
+
+    background-position:
+
+calc(0% + var(--portrait-left-x, 0px))
+calc(50% + var(--portrait-left-y, 0px)),
+
+calc(100% + var(--portrait-right-x, 0px))
+calc(50% + var(--portrait-right-y, 0px));
+
+background-size:
+
+var(--portrait-left-size, 260px),
+var(--portrait-right-size, 260px);
+
+}
+
+*/ 
+
+

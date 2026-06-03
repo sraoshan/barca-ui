@@ -1,0 +1,87 @@
+/*
+ * Water theme.
+ * First migrated theme layer for the current soft magical girl look.
+ * This file intentionally keeps layout, grids, stat positioning, and wrappers out.
+ */
+
+.theme-shine {
+
+    --barca-accent: #f3c6d9;
+
+    --barca-accent-soft: #fff2f8;
+
+    --barca-accent-strong: #e7b2cc;
+
+    --barca-surface: #fffdfc;
+
+    --barca-surface-alt:
+        rgba(255, 248, 252, 0.82);
+
+    --barca-surface-soft:
+        rgba(255, 255, 255, 0.76);
+
+    --barca-surface-top: rgba(255, 249, 214, 0.18);
+
+    --barca-text: #7d6974;
+
+    --barca-title: #d99dc0;
+
+    --barca-select-text: #c989b0;
+
+    --barca-outline:
+        rgba(255, 220, 235, 0.42);
+
+    --barca-radius:
+        var(--barca-radius-md);
+
+    --barca-theme-background:
+        url("");
+
+    --barca-theme-icon: "\2726";
+
+    --barca-theme-panel-gradient:
+        linear-gradient(
+            180deg,
+            #fffefe 0%,
+            #fffaf1 100%
+        );
+}
+
+
+
+.theme-shine .barca-tab:hover {
+    background: rgba(255, 135, 171, 0.82) !important;
+}
+
+
+
+.theme-shine.window-app.sheet.actor input[name="name"],
+.theme-shine.window-app.sheet.actor .charname input,
+.theme-shine.window-app.sheet.actor header input {
+    font-family: var(--barca-font-title) !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    text-align: center !important;
+    color: var(--barca-accent) !important;
+    background: rgba(255, 255, 255, 0.55) !important;
+    border: 2px solid rgba(255, 255, 255, 0.75) !important;
+    border-radius: var(--barca-radius-pill) !important;
+    padding: 4px 12px !important;
+}
+
+
+
+.theme-shine .stats-list .stat label {
+    color: #0d324b;
+}
+
+.theme-shine .stat-value {
+    background: linear-gradient(180deg, #ffffff 0%, #fffaec 100%) !important;
+}
+
+
+
+
+
+

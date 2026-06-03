@@ -1,0 +1,25 @@
+/*
+ * Barca stress component.
+ *
+ * .barca-stress-track marks the existing stress tracker container.
+ * .barca-stress-box marks each existing stress checkbox.
+ *
+ * State classes:
+ * .is-filled: the stress box is currently checked.
+ * .is-sealed: the stress box is beyond the actor stress limit.
+ * .is-disabled: the stress box cannot be interacted with.
+ *
+ * This component is visual only. It does not define tracker layout and does not
+ * replace the PbtA checkbox mechanics.
+ */
+
+.barca-stress-box {
+    cursor: pointer;
+}
+
+.barca-stress-box.is-sealed,
+.barca-stress-box.is-disabled {
+    opacity: 0.25 !important;
+    cursor: not-allowed !important;
+    pointer-events: none;
+}

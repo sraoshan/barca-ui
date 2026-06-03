@@ -1,0 +1,17 @@
+:root {
+    /*
+     * Structural tokens.
+     * These describe shared UI structure and behavior, not a theme identity.
+     * Future themes should usually consume these values rather than redefine them.
+     */
+    --barca-font-title: "BMYeonSung", cursive;
+    --barca-font-body: "Mali", cursive;
+
+    --barca-radius-sm: 10px;
+    --barca-radius-md: 14px;
+    --barca-radius-lg: 18px;
+    --barca-radius-pill: 999px;
+    --barca-radius-round: 50%;
+
+    --barca-transition-fast: 0.15s ease;
+}

@@ -1,0 +1,62 @@
+/*
+ * Water theme.
+ * First migrated theme layer for the current soft magical girl look.
+ * This file intentionally keeps layout, grids, stat positioning, and wrappers out.
+ */
+
+.theme-water {
+    --barca-accent: var(--barca-color-purple-soft);
+    --barca-accent-soft: var(--barca-color-purple-light);
+    --barca-accent-strong: #7a4fa3;
+    --barca-surface: #f7f2ff;
+    --barca-surface-alt: var(--barca-color-surface-glass);
+    --barca-surface-soft: var(--barca-color-surface-soft);
+    --barca-surface-top: rgba(234, 214, 255, 0.35);
+    --barca-text: var(--barca-color-text);
+    --barca-select-text: #9f6ad6;
+    --barca-title: var(--barca-color-title);
+    --barca-outline: rgba(217, 184, 255, 0.42);
+    --barca-radius: var(--barca-radius-md);
+    --barca-theme-background: url("https://assets.forge-vtt.com/6718848418cefc814f04c9a7/barca%20do%20c%C3%A9u/teatro/garotas/tarf%20brilhos.webp");
+    --barca-theme-icon: "\2661";
+    --barca-theme-panel-gradient: linear-gradient(180deg, #fbf8ff 0%, #f0e6ff 100%);
+}
+
+
+
+.theme-water .barca-tab:hover {
+    background: rgba(255, 255, 255, 0.82) !important;
+}
+
+
+
+.theme-water.window-app.sheet.actor input[name="name"],
+.theme-water.window-app.sheet.actor .charname input,
+.theme-water.window-app.sheet.actor header input {
+    font-family: var(--barca-font-title) !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    text-align: center !important;
+    color: var(--barca-accent) !important;
+    background: rgba(255, 255, 255, 0.55) !important;
+    border: 2px solid rgba(255, 255, 255, 0.75) !important;
+    border-radius: var(--barca-radius-pill) !important;
+    padding: 4px 12px !important;
+}
+
+
+
+.theme-water .stats-list .stat label {
+    color: #a64d8f;
+}
+
+.theme-water .stat-value {
+    background: linear-gradient(180deg, #ffffff 0%, #f4ecff 100%) !important;
+}
+
+
+
+
+
+

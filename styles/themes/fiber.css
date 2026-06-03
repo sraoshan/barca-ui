@@ -1,0 +1,107 @@
+/*
+ * Water theme.
+ * First migrated theme layer for the current soft magical girl look.
+ * This file intentionally keeps layout, grids, stat positioning, and wrappers out.
+ */
+
+.theme-fiber {
+
+    /* holographic aqua */
+    --barca-accent: #8fded3;
+
+    /* soft digital lavender */
+    --barca-accent-soft: #f3eeff;
+
+    /* energetic electric lilac */
+    --barca-accent-strong: #a89be8;
+
+    /* pearl glass surface */
+    --barca-surface: #fcffff;
+
+    /* translucent cyan-white */
+    --barca-surface-alt:
+        rgba(244, 255, 255, 0.82);
+
+    /* magical glass */
+    --barca-surface-soft:
+        rgba(255, 255, 255, 0.74);
+    
+    --barca-surface-top: rgba(210, 245, 255, 0.25);
+
+    /* readable cool gray */
+    --barca-text: #6c7484;
+
+    /* vibrant cyan-blue */
+    --barca-select-text: #6ea9d8;
+
+    /* lavender title glow */
+    --barca-title: #b09ae6;
+
+    /* holographic outlines */
+    --barca-outline:
+        rgba(195, 230, 255, 0.42);
+
+    --barca-radius:
+        var(--barca-radius-md);
+
+    --barca-theme-background:
+        url("");
+
+    /* crystal/star */
+    --barca-theme-icon: "\2726";
+
+    /* frosted holographic panel */
+    --barca-theme-panel-gradient:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #eefcff 55%,
+            #f6f0ff 100%
+        );
+}
+
+
+
+.theme-fiber .barca-tab:hover {
+    background:
+        rgba(206, 236, 255, 0.82)
+        !important;
+}
+
+
+.theme-leaf.window-app.sheet.actor input[name="name"],
+.theme-leaf.window-app.sheet.actor .charname input,
+.theme-leaf.window-app.sheet.actor header input {
+    font-family: var(--barca-font-title) !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    text-align: center !important;
+    color: var(--barca-accent) !important;
+    background: rgba(255, 255, 255, 0.55) !important;
+    border: 2px solid rgba(255, 255, 255, 0.75) !important;
+    border-radius: var(--barca-radius-pill) !important;
+    padding: 4px 12px !important;
+}
+
+
+
+.theme-fiber .stats-list .stat label {
+    color: #9f8fe2;
+}
+
+
+.theme-fiber .stat-value {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #eefcff 60%,
+            #f7f0ff 100%
+        ) !important;
+}
+
+
+
+/* flexrow attr colors */ 
+

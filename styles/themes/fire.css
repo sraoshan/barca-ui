@@ -1,0 +1,90 @@
+/*
+ * Water theme.
+ * First migrated theme layer for the current soft magical girl look.
+ * This file intentionally keeps layout, grids, stat positioning, and wrappers out.
+ */
+
+.theme-fire {
+
+    --barca-accent: #e7a8a1;
+
+    --barca-accent-soft: #fff1ef;
+
+    --barca-accent-strong: #c97b8c;
+
+    --barca-surface: #fffdfb;
+
+    --barca-surface-alt:
+        rgba(255, 245, 241, 0.82);
+
+    --barca-surface-soft:
+        rgba(255, 255, 255, 0.76);
+
+    --barca-surface-top: rgba(255, 220, 205, 0.28);    
+
+    --barca-text: #7d6666;
+
+    --barca-select-text: #cc7f7f;
+
+    --barca-title: #d88c9d;
+
+    --barca-outline:
+        rgba(240, 190, 180, 0.42);
+
+    --barca-radius:
+        var(--barca-radius-md);
+
+    --barca-theme-background:
+        url("");
+
+    --barca-theme-icon: "\2726";
+
+    --barca-theme-panel-gradient:
+        linear-gradient(
+            180deg,
+            #fffefe 0%,
+            #fff4f1 100%
+        );
+}
+
+
+.theme-fire .barca-tab:hover {
+    background:
+        rgba(255, 210, 195, 0.82)
+        !important;
+}
+
+
+.theme-fire.window-app.sheet.actor input[name="name"],
+.theme-fire.window-app.sheet.actor .charname input,
+.theme-fire.window-app.sheet.actor header input {
+    font-family: var(--barca-font-title) !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    text-align: center !important;
+    color: var(--barca-accent) !important;
+    background: rgba(255, 255, 255, 0.55) !important;
+    border: 2px solid rgba(255, 255, 255, 0.75) !important;
+    border-radius: var(--barca-radius-pill) !important;
+    padding: 4px 12px !important;
+}
+
+
+
+.theme-fire .stats-list .stat label {
+    color: #c76f87;
+}
+
+.theme-fire .stat-value {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fff3f0 100%
+        ) !important;
+}
+
+
+
+

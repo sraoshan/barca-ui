@@ -1,0 +1,738 @@
+:root {
+    /*
+     * Theme contract.
+     * Every theme class should define these official variables.
+     * Theme class names use the pattern .theme-{id}, such as .theme-light,
+     * .theme-darkness, and .theme-light.
+     *
+     * Thematic tokens:
+     * --barca-accent: main identity color for borders, titles, and active states.
+     * --barca-accent-soft: lighter companion color for outlines and subtle decoration.
+     * --barca-accent-strong: stronger companion color for selected/active UI.
+     * --barca-surface: main themed sheet surface.
+     * --barca-surface-alt: secondary themed surface for controls and panels.
+     * --barca-surface-soft: translucent/light surface for tabs and inputs.
+     * --barca-text: default readable text color.
+     * --barca-title: decorative title/header text color.
+     * --barca-outline: lightweight decorative outline color.
+     * --barca-theme-background: optional static themed image.
+     * --barca-theme-icon: optional decorative icon used by themed controls.
+     *
+     * Structural bridge:
+     * --barca-radius: theme-level default radius. It falls back to the structural radius.
+     *
+     * These root values are the fallback/default theme, so incomplete themes still work.
+     */
+    --barca-color-text: #6f6077;
+    --barca-color-title: #b07aa0;
+    --barca-color-surface: #fff8fd;
+    --barca-color-surface-soft: rgba(255, 255, 255, 0.75);
+    --barca-color-surface-glass: rgba(255, 255, 255, 0.82);
+    --barca-color-pink-soft: #fde6f4;
+    --barca-color-pink: #f7b8dc;
+    --barca-color-purple-soft: #ead8ff;
+    --barca-color-purple-light: #f3e8ff;
+    --barca-color-purple-deep: #9f7abf;
+    --barca-color-white: #ffffff;
+
+    --barca-outline-pink: rgba(247, 184, 220, 0.32);
+    --barca-outline-purple: rgba(234, 216, 255, 0.36);
+    --barca-shadow-minimal: 0 1px 2px rgba(111, 96, 119, 0.10);
+
+    --barca-accent: #f7b8dc;
+    --barca-accent-soft: #fde6f4;
+    --barca-accent-strong: #b07aa0;
+
+    --barca-surface: #fff8fd;
+
+    --barca-surface-alt: rgba(255,255,255,.82);
+    --barca-surface-soft: rgba(255,255,255,.72);
+    --barca-surface-top: #fcecf7;
+
+    --barca-text: #6f6077;
+    --barca-title: #b07aa0;
+
+    --barca-outline:
+        rgba(247,184,220,.28);
+
+    --barca-radius: var(--barca-radius-md);
+    --barca-theme-background: none;
+    --barca-theme-icon: "\2661";
+    --barca-theme-panel-gradient: linear-gradient(180deg, #fffbfd 0%, #f9eff8 100%);
+}
+
+.pbta.sheet.item .window-content {
+
+    background: var(--barca-surface);
+
+}
+
+.pbta.sheet.item {
+
+    --color-scrollbar:
+        var(--barca-accent-strong);
+
+    --color-scrollbar-track:
+        var(--barca-surface);
+
+}
+
+.pbta.sheet.item .window-header {
+
+    background:
+        var(--barca-accent-strong);
+
+    border-bottom:
+        2px solid var(--barca-accent);
+
+}
+
+
+
+/* Resource row balancing */
+
+ .cell--armor,
+ .cell--customResource {
+    flex: 0 0 130px;
+}
+
+
+
+/* XP track styling */
+.window-app.sheet.actor
+ .barca-progress-track {
+    
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    min-width: 150px;
+    padding: 6px 12px;
+    
+    background: rgba(255,255,255,.35);
+    border: 1px solid var(--barca-outline);
+    border-radius: 12px;
+}
+
+/* end resource row balacing */
+.window-app.sheet.actor
+ .cell--attr-status {
+    border: 2px solid var(--barca-accent);
+    border-radius: 16px;
+    padding: 8px 10px;
+}
+
+.window-app.sheet.actor
+ .barca-stress-box {
+appearance: none;
+    -webkit-appearance: none;
+
+background:
+    rgba(255,255,255,.9);
+
+border:
+    2px solid var(--barca-accent);
+
+box-shadow:
+    0 0 0 1px rgba(255,255,255,.45);
+
+transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    transform 120ms ease;
+
+
+    width: 18px;
+    height: 18px;
+    accent-color: var(--barca-accent);
+    border-radius: 12px;
+    outline: 1px solid var(--barca-outline);
+    cursor: pointer;
+}
+
+.window-app.sheet.actor
+.barca-stress-box:checked {
+    background:
+        var(--barca-accent);
+
+    border-color:
+        var(--barca-accent-strong);
+}
+
+.window-app.sheet.actor
+ .barca-stress-track {
+    display: grid !important;
+    grid-template-columns: repeat(7, auto);
+    gap: 8px;
+    padding: 6px 10px;
+    background: rgba(255,255,255,.35);
+    border: 1px solid var(--barca-outline);
+    border-radius: 12px;
+}
+
+.window-app.sheet.actor {
+    min-width: 850px;
+    min-height: 700px;
+}
+
+.window-app.sheet.actor
+ .cell--improvement .attr-xp {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 999px;
+    border: 2px solid var(--barca-accent);
+    background: rgba(255,255,255,.45);
+    cursor: pointer;
+    transition:
+        background-color 120ms ease,
+        border-color 120ms ease;
+}
+
+.window-app.sheet.actor
+ .cell--improvement .attr-xp:checked {
+    background: var(--barca-accent);
+}
+
+.window-app.sheet.actor
+ .cell--improvement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 180px;
+}
+
+.window-app.sheet.actor
+ .cell--attributes-top {
+    justify-content: center;
+    gap: 18px;
+    display: flex;
+}
+
+.window-app.sheet.actor
+ .cell--armor,
+ .cell--harm,
+ .cell--improvement,
+ .cell--customResource {
+    flex: 0 0 auto;
+}
+
+.window-app.sheet.actor
+ .cell--armor .barca-input {
+    width: 56px;
+    margin: 0 auto;
+}
+
+.window-app.sheet.actor
+ .cell--customResource .barca-input {
+    width: 56px;
+}
+
+.window-app.sheet.actor
+ .sheet-attributes-top .cell__title {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.window-app.sheet.actor
+ .cell--armor {
+    text-align: center;
+}
+
+.window-app.sheet.actor
+ .cell--attributes-top {
+    background-image:
+        url("/modules/barca-ui/assets/icons/crab.webp"),
+        url("/modules/barca-ui/assets/icons/crab.webp");
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
+
+    background-size:
+        35px 35px,
+        35px 35px;
+
+    background-position:
+        left 24px center,
+        right 24px center;
+
+    background-blend-mode: soft-light;
+}
+
+.window-app.sheet.actor
+.stat-value {
+    border: 2px solid var(--barca-accent-soft) !important;
+    border-radius: var(--barca-radius-pill) !important;
+    width: 48px;
+    text-align: center;
+    color: var(--barca-accent-soft);
+    font-weight: bold;
+    box-shadow: var(--barca-shadow-minimal);
+}
+
+.window-app.sheet.actor
+.stats-list .stat-icon > i {
+    display: none;
+}
+
+.window-app.sheet.actor
+.stat-icon::before {
+    content: var(--barca-theme-icon);
+    color: var(--barca-title);
+    font-size: 14px;
+}
+
+.window-app.sheet.actor
+.stats-list .stat label {
+    font-family: var(--barca-font-title);
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+.window-app.sheet.actor
+.stats-list .stat {
+    background: var(--barca-theme-panel-gradient);
+    border: 2px solid var(--barca-accent);
+    border-radius: var(--barca-radius-lg);
+    padding: 8px 10px 10px;
+    box-shadow: var(--barca-shadow-minimal);
+}
+
+.window-app.sheet.actor
+.stats-list .stat::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 22px;
+    border: 2px solid var(--barca-outline);
+    pointer-events: none;
+}
+
+.window-app.sheet.actor
+.barca-tab.active {
+    background: var(--barca-accent-strong) !important;
+    color: var(--barca-color-white) !important;
+}
+
+.window-app.sheet.actor
+.barca-panel {
+    background: var(--barca-surface-alt);
+    border: 2px solid var(--barca-accent);
+    box-shadow: var(--barca-shadow-minimal);
+}
+
+.window-app.sheet.actor .barca-section {
+    background: var(--barca-surface-soft);
+    border: 2px solid var(--barca-outline);
+}
+
+.window-app.sheet.actor header,
+.window-app.sheet.actor .window-header,
+.app.window-app.sheet.actor .window-header {
+    background: var(--barca-accent) !important;
+}
+
+.window-app.sheet.actor form,
+.window-app.sheet.actor .sheet-body {
+    background: var(--barca-surface) !important;
+}
+
+.window-app.sheet.actor .barca-input,
+.window-app.sheet.actor .barca-textarea,
+.window-app.sheet.actor .barca-select,
+.window-app.sheet.actor .barca-label,
+.window-app.sheet.actor span,
+.window-app.sheet.actor p {
+    font-family: var(--barca-font-body) !important;
+    color: var(--barca-text) !important;
+}
+
+.window-app.sheet.actor .barca-title,
+.window-app.sheet.actor header,
+.window-app.sheet.actor .window-header {
+    font-family: var(--barca-font-title) !important;
+    color: var(--barca-title) !important;
+}
+
+.window-app.sheet.actor .barca-input,
+.window-app.sheet.actor .barca-textarea,
+.window-app.sheet.actor .barca-select {
+    background: var(--barca-surface-alt) !important;
+    border: 2px solid var(--barca-accent) !important;
+    border-radius: var(--barca-radius) !important;
+    padding: 0 8px !important;
+    color: var(--barca-accent) !important;
+    font-family: var(--barca-font-body) !important;
+}
+
+.window-app.sheet.actor .barca-input:focus,
+.window-app.sheet.actor .barca-textarea:focus,
+.window-app.sheet.actor .barca-select:focus {
+    outline: none !important;
+    border-color: var(--barca-accent) !important;
+    outline: 2px solid var(--barca-outline) !important;
+    outline-offset: 2px;
+}
+
+.window-app.sheet.actor
+ .barca-tab {
+    background: var(--barca-surface-soft) !important;
+    border: 2px solid var(--barca-accent) !important;
+    border-radius: var(--barca-radius-pill) !important;
+    padding: 4px 12px !important;
+    margin: 2px !important;
+    color: var(--barca-title) !important;
+    font-family: var(--barca-font-title) !important;
+}
+
+.window-app.sheet.actor
+.barca-tab:hover {
+    border-color: var(--barca-accent-soft) !important;
+}
+
+.window-app.sheet.actor
+.attr-list {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    border:
+        2px solid var(--barca-accent);
+
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,.45);
+
+    cursor: pointer;
+
+    transition:
+        background-color 120ms ease,
+        border-color 120ms ease,
+        transform 120ms ease;
+
+    margin-right: 8px;
+}
+
+.window-app.sheet.actor
+.attr-list:checked {
+    background:
+        var(--barca-accent);
+
+    border-color:
+        var(--barca-accent-strong);
+}
+
+.window-app.sheet.actor
+.barca-theme-select {
+    color:
+        var(--barca-select-text)
+        !important;
+}
+
+
+.window-app.sheet.actor
+.cell__title {
+    border-bottom: 2px solid var(--barca-accent-strong) !important;
+}
+
+.window-app.sheet.actor
+.stats-list .stat .cell__title {
+    border-bottom: none !important;
+}
+
+.window-app.sheet.actor
+.tabs {
+    border-bottom:
+        2px solid
+        var(--barca-accent-strong)
+        !important;
+}
+
+
+
+.window-app.sheet.actor
+.barca-sheet-settings {
+
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-top: 24px;
+    padding-top: 12px;
+}
+
+.window-app.sheet.actor
+.barca-theme-selector,
+
+.window-app.sheet.actor
+.barca-layout-selector {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.window-app.sheet.actor
+.portrait-controls {
+
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.window-app.sheet.actor
+.barca-button {
+
+    border: 2px solid
+        var(--barca-accent);
+
+    background:
+        var(--barca-surface-alt);
+
+    border-radius:
+        var(--barca-radius-pill);
+
+    padding:
+        4px 10px;
+
+    cursor: pointer;
+
+    color:
+        var(--barca-text);
+}
+
+.window-app.sheet.actor
+.portrait-preview {
+
+    display: flex;
+    gap: 8px;
+
+    margin-top: 8px;
+}
+
+.window-app.sheet.actor
+.barca-preview {
+
+    width: 72px;
+    height: 72px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 2px solid
+        var(--barca-accent);
+}
+
+.window-app.sheet.actor .cell--attr-status {
+    background:
+        var(--barca-surface-top);
+}
+
+.window-app.sheet.actor .barca-stress-box {
+    background:
+        var(--barca-surface-top);
+}
+
+.window-app.sheet.actor .sheet-attributes-top {
+    box-shadow:
+        0 -8px 16px
+        var(--barca-surface-top);
+
+    background:
+        var(--barca-surface-top);
+}
+
+
+.barca-bonus-section {
+
+    font-family: var(--barca-font-body);
+    color: var(--barca-text);
+}
+
+.barca-bonus-header,
+.barca-ongoings > strong,
+.barca-forwards > strong {
+
+    font-family: var(--barca-font-heading) !important;
+}
+
+.barca-bonus-header .barca-bonus-toggle {
+
+    font-family: var(--barca-font-heading) !important;
+
+    color: var(--barca-text) !important;
+}
+
+.pbta.sheet.actor.character {
+
+    --color-scrollbar: var(--barca-accent-strong);
+    --color-scrollbar-track: var(--barca-surface);
+}
+
+.pbta.sheet.actor.character .window-content {
+
+    background: var(--barca-surface);
+}
+
+
+
+
+
+/* foundry theme */ 
+
+
+
+/* ==========================================
+   ITEM / MOVE SHEETS — BARCA UI
+   ========================================== */
+
+/* fundo geral */
+
+.item-form {
+
+    background: var(--barca-surface-top);
+}
+
+
+/* header */
+
+.item-form .sheet-header {
+
+    background: var(--barca-surface-top);
+
+    border-radius: 12px;
+
+    padding: 6px;
+}
+
+
+/* título */
+
+.item-form .charname input {
+
+    font-family: var(--barca-font-heading) !important;
+
+    font-size: 25px !important;
+
+    color: var(--barca-accent-strong);
+
+    text-align: center;
+}
+
+
+/* abas */
+
+.item-form .sheet-tabs a {
+
+    background: rgba(255,255,255,0.65);
+
+    border: 2px solid var(--barca-accent);
+
+    border-radius: 999px;
+
+    padding: 4px 12px;
+
+    margin: 2px;
+
+    color: var(--barca-text);
+
+    font-family: var(--barca-font-heading);
+}
+
+
+.item-form .sheet-tabs a.active {
+
+    background: var(--barca-accent-strong);
+
+    color: white;
+}
+
+
+/* labels */
+
+.item-form label {
+
+    font-family: var(--barca-font-heading);
+
+    color: var(--barca-text);
+}
+
+
+/* campos */
+
+.item-form input,
+.item-form select,
+.item-form textarea {
+
+    background: rgba(255,255,255,0.75);
+
+    border: 2px solid var(--barca-accent);
+
+    border-radius: 14px;
+
+    padding: 0 8px;
+
+    color: var(--barca-text);
+
+    font-family: var(--barca-font-body);
+}
+
+
+/* focus */
+
+.item-form input:focus,
+.item-form textarea:focus,
+.item-form select:focus {
+
+    outline: none;
+
+    border-color: var(--barca-accent-strong);
+
+    box-shadow:
+        0 0 6px var(--barca-accent);
+}
+
+
+/* blocos de resultado */
+
+.item-form .move-result {
+
+    background: var(--barca-surface-top);
+
+    border: 2px solid var(--barca-accent);
+
+    border-radius: 16px;
+
+    padding: 8px;
+}
+
+
+/* editor */
+
+.item-form .editor {
+
+    border-radius: 12px;
+}
+
+
+/* ícone lápis */
+
+.item-form .editor-edit i {
+
+    color: var(--barca-accent-strong);
+}

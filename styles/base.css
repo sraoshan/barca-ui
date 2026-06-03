@@ -1,0 +1,1 @@
+/* Compatibility shim for cached Foundry manifests using the old path. */

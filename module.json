@@ -1,0 +1,86 @@
+{
+  "id": "barca-ui",
+  "title": "Barca UI",
+  "description": "Visual and interface layer for PbtA",
+  "version": "1.0.0",
+
+  "authors": [
+    {
+        "name": "sraoshan"
+    }
+  ],
+
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+
+  "scripts": [
+    "scripts/main.js",
+    "scripts/bootstrap.js",
+    "scripts/constants.js",
+    "scripts/settings/settings-data.js",
+    "scripts/settings/register-settings.js",
+    "scripts/features/autohide-ui.js",
+    "scripts/features/floating-chat.js",
+    "scripts/features/compact-sidebar.js",
+    "scripts/features/animated-hotbar.js",
+    "scripts/features/transitions.js",
+    "scripts/features/component-classes.js",
+    "scripts/features/theme-manager.js",
+    "scripts/hooks/render-chat-log.js",
+    "scripts/hooks/render-sidebar.js",
+    "scripts/hooks/render-hotbar.js",
+    "scripts/hooks/render-move-sheet.js",
+    "scripts/hooks/render-bonus-lists.js",
+    "scripts/hooks/render-stress-trackers.js",
+    "scripts/hooks/resize-limits.js",
+    "scripts/hooks/render-theme-selector.js",
+    "scripts/hooks/render-layout-selector.js",
+    "scripts/hooks/render-portrait-selector.js",
+    "scripts/hooks/ready.js",
+    "scripts/utils/dom.js",
+    "scripts/utils/css.js",
+    "scripts/utils/debounce.js"
+  ],
+
+  "styles": [
+    "styles/core/variables.css",
+    "styles/core/layouts.css",
+    "styles/core/animations.css",
+    "styles/core/themes.css",
+    "styles/components/chat.css",
+    "styles/components/hotbar.css",
+    "styles/components/sidebar.css",
+    "styles/components/windows.css",
+    "styles/components/controls.css",
+    "styles/components/stress-trackers.css",
+    "styles/components/scene-navigation.css",
+    "styles/components/tooltips.css",
+    "styles/systems/pbta.css",
+    "styles/themes/water.css",
+    "styles/themes/shine.css",
+    "styles/themes/moon.css",
+    "styles/themes/leaf.css",
+    "styles/themes/desire.css",
+    "styles/themes/fire.css",
+    "styles/themes/fiber.css"
+  ],
+
+  "relationships": {
+    "requires": [
+      {
+        "id": "barca-qol",
+        "type": "module"
+      }
+    ]
+  },
+
+  "url": "https://github.com/sraoshan/barca-ui",
+
+  "manifest": "https://raw.githubusercontent.com/sraoshan/barca-ui/main/module.json",
+
+  "download": "https://github.com/sraoshan/barca-ui/releases/download/v1.0.0/barca-ui.zip",
+
+  "license": "MIT"
+}

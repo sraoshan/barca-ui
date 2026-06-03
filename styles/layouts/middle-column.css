@@ -1,0 +1,82 @@
+.layout-middle-column .sheet-attributes {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.layout-middle-column .cell--image {
+    display: none;
+}
+
+
+
+.layout-middle-column .stats-list {
+
+    display: flex !important;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    width: 160px;
+
+    margin: 0;
+
+    padding-left: 24px;
+
+    
+}
+
+.layout-middle-column .stats-list .stat {
+
+    position: relative !important;
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+.layout-middle-column .cell--stats {
+
+    align-self: center;
+    
+}
+
+
+
+
+
+/* backup sheet top
+
+.layout-middle-column.portrait-dual .sheet-top {
+
+    background:
+        none;
+
+    background-image:
+        var(--barca-portrait-left),
+        var(--barca-portrait-right);
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
+
+    background-position:
+
+calc(0% + var(--portrait-left-x, 0px))
+calc(50% + var(--portrait-left-y, 0px)),
+
+calc(100% + var(--portrait-right-x, 0px))
+calc(50% + var(--portrait-right-y, 0px));
+
+background-size:
+
+var(--portrait-left-size, 260px),
+var(--portrait-right-size, 260px);
+
+}
+
+*/ 
+
+

@@ -1,0 +1,5 @@
+/* Compatibility shim for cached Foundry manifests using the old path. */
+
+@import url("./core/variables.css");
+@import url("./core/themes.css");
+@import url("./themes/water.css");
